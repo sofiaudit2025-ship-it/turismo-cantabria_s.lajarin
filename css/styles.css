@@ -1,0 +1,10 @@
+:root {
+    --fuente-titulos:"Baskervville", serif;
+    --fuente-texto:"Inter", sans-serif;
+
+    --color-fondo1:#1F5148;
+    --color-texto1:#F5F1EE;
+
+    --color-fondo2:#F5F1EE;
+    --color-texto2:#1F5148;
+}
