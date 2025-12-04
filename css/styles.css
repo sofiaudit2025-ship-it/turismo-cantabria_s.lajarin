@@ -15,66 +15,207 @@
     box-sizing: border-box;
     font-family: var(--fuente-texto);
     scroll-behavior: smooth;
+}
+nav#menu {
     
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-fondo1);
+    z-index: 100;
+    padding-top: 10px;
 }
 
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 40px;
-  width: auto;
-  display: block;
-}
-
-#menu {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #0f3b2e;
-}
-
+/* Contenedor horizontal */
 .menu-contenedor {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    top: 0;
 }
 
-.menu-derecha {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+/* Bloque izquierdo: logo + enlaces */
+.menu-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
-.menu-derecha a {
-  font-family: var(--fuente-texto);
-  color: var(--color-texto1);
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: rgba(255,255,255,0.8);
-  position: relative;
+nav#menu img.logo {
+    height: 40px;
+    width: auto;
+    max-width: none;
 }
 
-.menu-derecha a:hover {
-  color: var(--color-texto1);
+.logo-contenedor {
+    display: flex;
+    align-items: center;
 }
 
-.menu-derecha a::after {
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background: var(--color-fondo2);
-  transition: width 0.25s ease;
+/* Enlaces del menú */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+/* Estilo de los links */
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-texto1);   
+    font-family: var(--fuente-texto);
+    font-weight: 400;
+    opacity: 1;
+    transition: opacity 0.2s ease;
 }
 
-.menu-derecha a:hover::after {
-  width: 100%;
+.nav-links a:hover {
+    opacity: 1;
+}
+
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+/* Imagen del hero */
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* No se deforma, siempre cubre */
+    object-position: center;
+    display: block;
+}
+
+/* Capa oscura */
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35);
+    z-index: 1;
+}
+
+/* Contenido */
+.hero-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50px;  /* como en tu diseño */
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white;
+}
+
+.hero-contenido h1 {
+    font-size: 4rem;
+    font-family: var(--fuente-titulos);
+    font-weight: 100;
+}
+
+.hero-contenido h1 span {
+    font-weight: 300;
+}
+
+.hero-contenido p {
+    width: 50%;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+
+/* SECCIÓN VERDE */
+.seccion-verde {
+    background-color: var(--color-fondo1);
+    color: var(--color-texto1);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.seccion-verde p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    font-family: var(--fuente-titulos);
+}
+
+.seccion-verde p::after {
+    content: "";
+    display: block;
+    width: 400px;     /* Ajusta al gusto */
+    height: 2px; 
+    background-color: var(--color-texto1);
+    margin: 40px auto 0 auto;
+    opacity: 0.6;     /* Para simular la estética del mockup */
+}
+
+/* SECCIÓN VIDEO */
+.seccion-video {
+    position: relative;
+    width: 100%;
+    height: 75vh; /* Ajusta al gusto */
+    overflow: hidden;
+}
+
+/* Vídeo a pantalla completa */
+.seccion-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* SECCIÓN NATURALEZA */
+.seccion-naturaleza {
+    display: flex;
+    width: 100%;
+    background-color: var(--color-fondo2); 
+    color: var(--color-texto2); 
+    min-height: 60vh;
+}
+
+/* Imagen izquierda sin márgenes laterales */
+.naturaleza-imagen img {
+    width: 50vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Texto a la derecha */
+.naturaleza-texto {
+    width: 50%;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Título */
+.naturaleza-texto h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 3.5rem;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+/* Párrafo */
+.naturaleza-texto p {
+    font-family: var(--fuente-texto);
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    max-width: 500px;
 }
