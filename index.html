@@ -4,37 +4,99 @@
     <head>
         <title>Cantabria Infinita</title>
         <meta charset="utf-8">
-        <link rel="Styelsheet" href="css/styles.css">
+        <link rel="Stylesheet" href="css/styles.css">
         <script src="java/jquery-3.7.1.min.js"></script>
         <script src="java/script.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="imagenes/logo_cantabria.png" type="image/png">
     </head>
     <body>
-        <nav id="menu">
-            <div class="menu-contenedor">
+      <nav id="menu">
+        <div class="menu-contenedor">
+
+          <!-- IZQUIERDA: LOGO -->
+          <div class="menu-izquierda">
+            <div class="logo-contenedor">
+            <a href="index.html">
+              <figure>
+                <img class="logo" src="imagenes/cantabria_infinita.png" alt="logo cantabria">
+              </figure>
+          </a>
+</div>
+         </div>
+
+    <!-- DERECHA: SOLO ENLACES -->
+          <div class="menu-derecha">
+            <ul class="nav-links">
+              <li><a href="Historia">Historia</a></li>
+              <li><a href="Naturaleza">Naturaleza</a></li>
+              <li><a href="Ciudades">Ciudades y villas</a></li>
+              <li><a href="Playas">Playas</a></li>
+              <li><a href="Planes">Planes</a></li>
+              <li><a href="Deportes">Deportes</a></li>
+            </ul>
+          </div>
+
+         </div>
+      </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+    <img src="imagenes/cabecera.webp" alt="Paisaje de Cantabria">
+
+    <div class="overlay"></div>
+
+    <div class="hero-contenido">
+        <h1>Visita <span>Cantabria</span></h1>
+        <p>
+            Cantabria es mar y montaña en pocos kilómetros. Un destino ideal si buscas naturaleza, pueblos con historia, buena comida y planes al aire libre sin masificaciones extremas. No es el Caribe ni los Alpes, pero su equilibrio es justo lo que la hace especial.
+        </p>
+    </div>
+  </section>
+
+
+    <!-- FONDO VERDE -->
+    <section class="seccion-verde">
+        <p>
+        Cantabria guarda una historia que va desde el arte rupestre prehistórico hasta villas medievales y legado industrial. Aquí nació una de las primeras grandes expresiones artísticas de la humanidad y aún se respira pasado en calles empedradas y antiguas casonas.
+        </p>
+    </section>
+
+    <!-- SECCIÓN VIDEO -->
+  <section class="seccion-video">
+    <video autoplay muted loop playsinline>
+        <source src="videos/Cantabria-Infinita-CANTABRIA-TURISMO.webm" type="video/webm">
+        </video>
+
+    <div class="video-overlay"></div>
+
+  </section>
+
+  <section class="seccion-naturaleza">
     
-              <div class="menu-izquierda">
-                <a href="index.html" class="logo">
-                <img src="imagenes/cantabria_infinita.png" alt="Visita Cantabria">
-                </a>
-                </div>
+    <figure class="naturaleza-imagen">
+        <img src="imagenes/1522370-1920x1280-desktop-hd-cantabrian-mountains-background-_1_.webp" alt="Paisaje natural de Cantabria">
+    </figure>
 
-              <ul class="menu-derecha">
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#naturaleza">Naturaleza</a></li>
-                <li><a href="#ciudades">Ciudades y villas</a></li>
-                <li><a href="#playas">Playas</a></li>
-                <li><a href="#planes">Planes</a></li>
-                <li><a href="#deporte">Deporte</a></li>
-              </ul>
-            </div>
-        </nav>
+    <div class="naturaleza-texto">
+        <header>
+            <h2>Naturaleza</h2>
+        </header>
+
+        <p>
+            Cantabria es un auténtico paraíso natural: montañas que se funden con el mar,
+            bosques infinitos, acantilados salvajes y valles que parecen detenidos en el tiempo.
+            Aquí la naturaleza no es un escenario, es parte de la vida cotidiana.
+        </p>
+    </div>
+
+  </section>
 
 
-    </body>
+  </body>
 
 </html>
