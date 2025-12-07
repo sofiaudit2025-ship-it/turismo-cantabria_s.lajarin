@@ -33,36 +33,3 @@ window.onload = function() {
 
 };
 
-/* Carrusel simple infinito */
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const track = document.querySelector(".ciudades-track");
-    const items = document.querySelectorAll(".ciudades-item");
-    const prev = document.querySelector(".ciudades-prev");
-    const next = document.querySelector(".ciudades-next");
-
-    let index = 0;
-
-    function move() {
-        const width = items[0].offsetWidth;
-        track.style.transform = `translateX(${-index * width}px)`;
-    }
-
-    next.addEventListener("click", () => {
-        index++;
-        if (index >= items.length) index = 0;
-        move();
-    });
-
-    prev.addEventListener("click", () => {
-        index--;
-        if (index < 0) index = items.length - 1;
-        move();
-    });
-
-    window.addEventListener("resize", move);
-
-    move();
-});
-

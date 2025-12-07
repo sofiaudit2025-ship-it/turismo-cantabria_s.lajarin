@@ -41,12 +41,12 @@
     <!-- DERECHA: SOLO ENLACES -->
           <div class="menu-derecha">
             <ul class="nav-links">
-              <li><a href="Historia">Historia</a></li>
-              <li><a href="Naturaleza">Naturaleza</a></li>
-              <li><a href="Ciudades">Ciudades y villas</a></li>
-              <li><a href="Playas">Playas</a></li>
-              <li><a href="Planes">Planes</a></li>
-              <li><a href="Deportes">Deportes</a></li>
+              <li><a href="#Historia">Historia</a></li>
+              <li><a href="#Naturaleza">Naturaleza</a></li>
+              <li><a href="#Ciudades">Ciudades y villas</a></li>
+              <li><a href="#Playas">Playas</a></li>
+              <li><a href="#Cabarceno">Cabárceno</a></li>
+              <li><a href="#Deportes">Deportes</a></li>
             </ul>
           </div>
 
@@ -54,7 +54,7 @@
       </nav>
 
     <!-- HERO -->
-    <section class="hero">
+    <section  class="hero">
     <img src="imagenes/cabecera.webp" alt="Paisaje de Cantabria">
 
     <div class="overlay"></div>
@@ -72,14 +72,14 @@
 
 
     <!-- FONDO VERDE -->
-    <section class="seccion-verde">
+    <section id="Historia" class="seccion-verde">
         <p>
         Cantabria guarda una historia que va desde el arte rupestre prehistórico hasta villas medievales y legado industrial. Aquí nació una de las primeras grandes expresiones artísticas de la humanidad y aún se respira pasado en calles empedradas y antiguas casonas.
         </p>
     </section>
 
     <!-- SECCIÓN VIDEO -->
-  <section class="seccion-video">
+  <section  class="seccion-video">
     <video autoplay muted loop playsinline>
         <source src="videos/Cantabria-Infinita-CANTABRIA-TURISMO.webm" type="video/webm">
         </video>
@@ -88,7 +88,7 @@
 
   </section>
 
-  <section class="seccion-naturaleza">
+  <section id="Naturaleza" class="seccion-naturaleza">
     
     <figure class="naturaleza-imagen">
         <img src="imagenes/naturaleza_cantabria.webp" alt="Paisaje natural de Cantabria">
@@ -100,109 +100,109 @@
         </header>
 
         <p>
-            Cantabria es un auténtico paraíso natural: montañas que se funden con el mar, bosques infinitos, acantilados salvajes y valles que parecen detenidos en el tiempo. Aquí la naturaleza no es un escenario, es parte de la vida cotidiana.
+            Cantabria es un lugar donde la naturaleza se respira en cada paso. Valles verdes, acantilados frente al Cantábrico, bosques silenciosos y montañas imponentes dibujan un paisaje vivo y cambiante. <br>Desde los Picos de Europa hasta los senderos que cruzan prados y riberas, la región invita a desconectar, caminar y descubrir rincones llenos de calma y belleza.<br>Cantabria es un refugio natural que siempre guarda nuevos parajes por explorar.
         </p>
     </div>
 
   </section>
 
-<section class="ciudades-villas-contenedor">
+<section id="Ciudades" class="ciudades-villas-contenedor">
     <div class="ciudades-texto">
         
       <h2>Ciudades <br>y villas</h2>
-      <p>
-          Cantabria cuenta con ciudades y villas muy diferentes entre sí. Santander destaca por su bahía y su vida cultural; Santillana del Mar conserva un marcado carácter medieval; Comillas combina playa y modernismo; y Castro Urdiales une historia y ambiente marinero. Todas reflejan la diversidad y el carácter de Cantabria.
+        <p>
+          Liérganes, Santander, Comillas, Mogrovejo, Bárcena Mayor y Santillana del Mar son solo una pequeña muestra de todo lo que Cantabria tiene para ofrecer.<br>Entre montañas, costa y valles se esconden aún más tesoros por descubrir: Potes, Castro Urdiales, <br>Ampuero, Suances, Carmona o Noja, entre muchos.<br> Cada rincón guarda su propio encanto…y todavía te queda un mundo por explorar.
         </p>
 
         
     </div>
 
- <div class="ciudades-imagenes">
+<div class="ciudades-imagenes">
+  <button class="ciudades-prev" onclick="document.querySelector('.ciudades-track').scrollBy({left: -310, behavior: 'smooth'})">
+    <i class="fi fi-rs-angle-double-small-left"></i>
+  </button>
 
-        <button class="ciudades-prev">
-            <i class="fi fi-rs-angle-double-small-left"></i>
-        </button>
-
-        <button class="ciudades-prev">
-            <i class="fi fi-rs-angle-double-small-right"></i>
-        </button>
-
-
-    <div class="ciudades-item">
-      <img src="imagenes/barcena-mayor.webp" alt="Barcena Mayor">
-    </div>
-    <div class="ciudades-item">
-      <img src="imagenes/lierganes.webp" alt="Lierganes">
-    </div>
-    <div class="ciudades-item">
+  <div class="ciudades-track">
+    <figure class="ciudades-item">
+      <img src="imagenes/barcena-mayor.webp" alt="Bárcena Mayor">
+      <div class="overlay-text">Bárcena Mayor</div>
+    </figure>
+    <figure class="ciudades-item">
+      <img src="imagenes/lierganes.webp" alt="Liérganes">
+      <div class="overlay-text">Liérganes</div>
+    </figure>
+    <figure class="ciudades-item">
       <img src="imagenes/mogrovejo.webp" alt="Mogrovejo">
-    </div>
-    <div class="ciudades-item">
+      <div class="overlay-text">Mogrovejo</div>
+    </figure>
+    <figure class="ciudades-item">
       <img src="imagenes/comillas.webp" alt="Comillas">
-    </div>
-    <div class="ciudades-item">
+      <div class="overlay-text">Comillas</div>
+    </figure>
+    <figure class="ciudades-item">
       <img src="imagenes/santander.webp" alt="Santander">
-    </div>
-    <div class="ciudades-item">
+      <div class="overlay-text">Santander</div>
+    </figure>
+    <figure class="ciudades-item">
       <img src="imagenes/Santillana-del-Mar.webp" alt="Santillana del Mar">
-    </div>
+      <div class="overlay-text">Santillana del Mar</div>
+    </figure>
   </div>
 
-  <!-- controles -->
-  <button class="ciudades-prev" aria-label="Anterior"><i class="fi fi-rr-angle-left"></i></button>
-  <div class="ciudades-dots" aria-hidden="false"></div>
-  <button class="ciudades-next" aria-label="Siguiente"><i class="fi fi-rr-angle-right"></i></button>
+  <button class="ciudades-next" onclick="document.querySelector('.ciudades-track').scrollBy({left: 310, behavior: 'smooth'})">
+    <i class="fi fi-rs-angle-double-small-right"></i>
+  </button>
 </div>
 
 </section>
 
-<section class="playas-planes-deporte">
-<!-- PLAYAS -->
-<section class="seccion-playas">
-    <figure class="playas-imagen">
-        <img src="imagenes/playas.webp" alt="Playas de Cantabria">
-    </figure>
 
-    <div class="playas-texto">
+<section id="Playas" class="seccion-grid">
+
+    <div class="grid-item imagen-grande">
+        <img src="imagenes/playas.webp" alt="Playas Cantabria">
+    </div>
+
+    <div class="grid-item bloque-verde">
         <h2>Playas</h2>
         <p>
-          Las playas de Cantabria son un pequeño tesoro del norte: arenales amplios, calas escondidas, olas perfectas para surfistas y rincones tranquilos para quienes buscan desconectar. Cada una ofrece una experiencia distinta, pero todas comparten el carácter salvaje y la tranquilidad que define esta costa. Un lugar donde el mar, el viento y la luz crean paisajes que nunca se repiten.
+            Kilómetros de playas abiertas, salvajes o urbanas. Buenas para pasear, surfear o simplemente mirar el mar.
         </p>
     </div>
+
 </section>
 
+<section id="Cabarceno" class="seccion-grid">
 
-<!-- CABÁRCENO -->
-<section class="seccion-cabarceno">
-    <div class="cabarceno-texto">
+    <div class="grid-item bloque-verde">
         <h2>Cabárceno</h2>
         <p>
-            Cabárceno no es un zoo al uso, sino un espacio natural único donde los animales viven en semilibertad entre montañas, praderas y desfiladeros. Un paisaje modelado por la antigua actividad minera que hoy se ha transformado en un refugio para especies de los cinco continentes. Ideal para recorrer en familia, disfrutar de miradores, teleféricos y observar de cerca la fauna salvaje en un entorno sorprendente.
+            Para vivir una experiencia en la selva africana no es necesario hacer miles de kilómetros.
         </p>
-
-        <a href="#" class="boton-cabarceno">Consigue ya tus entradas</a>
+        <a href="#" class="btn-blanco">Consigue ya tus entradas</a>
     </div>
 
-    <figure class="cabarceno-imagen">
+    <div class="grid-item imagen-grande">
         <img src="imagenes/cabarceno3.jpg" alt="Cabárceno">
-    </figure>
+    </div>
+
 </section>
 
+<section id="Deportes" class="seccion-grid">
 
-<!-- DEPORTE -->
-<section class="seccion-deporte">
-    <figure class="deporte-imagen">
-        <img src="imagenes/surf.webp" alt="Surf en Cantabria">
-    </figure>
+    <div class="grid-item imagen-grande">
+        <img src="imagenes/surf.webp" alt="Deporte en Cantabria">
+    </div>
 
-    <div class="deporte-texto">
-        <h2>Deporte</h2>
+    <div class="grid-item bloque-verde">
+        <h2>Playas</h2>
         <p>
-            Cantabria presume de algunas de las playas más espectaculares del norte: largas, salvajes, rodeadas de acantilados o en pleno ambiente urbano. Aquí puedes caminar kilómetros sin agobios, aprender a surfear, desconectar con el sonido de las olas o simplemente contemplar el mar en calma. Cada playa tiene su carácter y todas comparten lo mismo: naturaleza en estado puro.
+            Kilómetros de playas abiertas, salvajes o urbanas. Buenas para pasear, surfear o simplemente mirar el mar.
         </p>
     </div>
+
 </section>
-</section>
+
 
 
   </body>
