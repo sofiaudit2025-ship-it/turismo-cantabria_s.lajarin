@@ -1,43 +1,68 @@
-/* Abre el menú */
-function openMenu() {
-  document.querySelector(".menu-movil").classList.add("activo");
-  document.body.style.overflow = "hidden"; // Evita scroll detrás del menú
-}
+window.onload = function() {
 
-/* Cierra el menú */
-function closeMenu() {
-  document.querySelector(".menu-movil").classList.remove("activo");
-  document.body.style.overflow = ""; // Restablece el scroll
-}
+    /* Pantalla de carga */
+    setTimeout(function() {
+        const loader = document.getElementById("loader");
+        if (loader) {
+            loader.style.top = "-100%";
+        }
+    }, 2000);
 
-/*carrusel funcional*/
-$(document).ready(function () {
+    /* Abre el menú */
+    function openMenu() {
+        document.querySelector(".menu-movil").classList.add("activo");
+        document.body.style.overflow = "hidden";
+    }
+
+    /* Cierra el menú */
+    function closeMenu() {
+        document.querySelector(".menu-movil").classList.remove("activo");
+        document.body.style.overflow = "";
+    }
+
+    /* Deslizar hacia abajo (si existe el icono) */
+    const scrollIcon = document.querySelector(".scroll-down");
+    if (scrollIcon) {
+        scrollIcon.addEventListener("click", function () {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth"
+            });
+        });
+    }
+
+};
+
+/* Carrusel simple infinito */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const track = document.querySelector(".ciudades-track");
+    const items = document.querySelectorAll(".ciudades-item");
+    const prev = document.querySelector(".ciudades-prev");
+    const next = document.querySelector(".ciudades-next");
 
     let index = 0;
-    const total = $(".carrusel img").length;
 
-    function calcularPaso() {
-        return $(".carrusel img").outerWidth(true);
+    function move() {
+        const width = items[0].offsetWidth;
+        track.style.transform = `translateX(${-index * width}px)`;
     }
 
-    // Cuando cargan todas las imágenes, calculamos ancho
-    let paso = calcularPaso();
-
-    $(window).on("resize", function () {
-        paso = calcularPaso();
-        mover();
+    next.addEventListener("click", () => {
+        index++;
+        if (index >= items.length) index = 0;
+        move();
     });
 
-    $(".puntos span").click(function () {
-        index = $(this).index();
-        mover();
+    prev.addEventListener("click", () => {
+        index--;
+        if (index < 0) index = items.length - 1;
+        move();
     });
 
-    function mover() {
-        $(".carrusel").css("transform", "translateX(" + (-paso * index) + "px)");
-        $(".puntos span").removeClass("activo");
-        $(".puntos span").eq(index).addClass("activo");
-    }
+    window.addEventListener("resize", move);
 
+    move();
 });
 

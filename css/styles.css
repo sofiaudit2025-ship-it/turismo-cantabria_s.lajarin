@@ -135,6 +135,33 @@ nav#menu img.logo {
     line-height: 1.7rem;
     font-weight: 300;
     margin-left: 20px;
+    text-align: justify;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.8rem;
+    color: var(--color-texto1);
+    cursor: pointer;
+    opacity: 0.9;
+    z-index: 100;
+}
+
+/* Animación suave del icono */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+.scroll-down:hover {
+    opacity: 1;
 }
 
 /* SECCIÓN VERDE */
@@ -186,6 +213,7 @@ nav#menu img.logo {
     background-color: var(--color-fondo2); 
     color: var(--color-texto2); 
     min-height: 60vh;
+    
 }
 
 /* Imagen izquierda sin márgenes laterales */
@@ -222,35 +250,58 @@ nav#menu img.logo {
     font-family: var(--fuente-texto);
     font-size: 1rem;
     line-height: 1.2rem;
-    max-width: 600px;
+    max-width: 1000px;
     font-weight: 300;
+    text-align: justify;
 }
 
 .seccion-naturaleza p::after {
     content: "";
     display: block;
-    width: 600px;     
+    width: 660px;     
     height: 2px; 
     background-color: var(--color-texto2);
-    margin: 40px auto 0 auto;
+    margin-top: 40px ;
+    margin-right: 0;
     opacity: 0.8;   
 }
 
 
+/*ciudades*/
 
-/* ===== SECCIÓN CIUDADES ===== */
-.seccion-ciudades {
-    display: grid;
-    grid-template-columns: 1fr 40vw;
+.ciudades-villas-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
-    min-height: 70vh;
     background-color: var(--color-fondo2);
-    color: var(--color-texto2);
 }
+
+
+
+.ciudades-imagenes {
+    display: flex;
+    gap: 20px;
+    padding-right: 0; /* Pegado al borde derecho */
+    padding-bottom: 80px;
+}
+
+.ciudades-imagenes img {
+    width: 290px;   
+    height: 450px;   
+    object-fit: cover;
+    
+}
+
+
 
 /* Texto Izquierda */
 .ciudades-texto {
-    padding: 100px 60px;
+    width: 60%;
+    padding-left: 5%;
+    color: var(--color-texto2);
+    align-self: flex-end;
+    padding: 80px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -262,62 +313,253 @@ nav#menu img.logo {
     font-size: 4rem;
     font-weight: 200;
     margin-bottom: 25px;
+    line-height: 55px;
+    
     
 }
 
 .ciudades-texto p {
-    width: 650px;
+    width: 70%;
+    text-align: justify;
 
 }
 
-/* === CARRUSEL CIUDADES === */
-.carrusel-ciudades {
+.ciudades-texto p::after {
+    content: "";
+    display: block;
+    width: 360px;     
+    height: 2px; 
+    background-color: var(--color-texto2);
+    margin: 20px auto 0 auto;
+    opacity: 0.8; 
+}
+
+/* ----------------------------------------- */
+/* SECCIÓN PLAYAS – MISMA ESTRUCTURA NATURALEZA */
+/* ----------------------------------------- */
+
+.seccion-playas {
+    display: flex;
     width: 100%;
-    overflow: hidden;
+    background-color: var(--color-fondo1);
+    color: var(--color-texto1);
+    min-height: 60vh;
+}
+
+.playas-imagen img {
+    width: 65vw;
+    height: 70%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-top: 50px;
+}
+
+.playas-texto {
+    width: 50%;
+    padding: 20px 60px;
+    margin-top: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 40px 0;
 }
 
-.carrusel {
+.playas-texto h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.playas-texto p {
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    line-height: 1.2rem;
+    max-width: 600px;
+    font-weight: 300;
+}
+
+
+
+/* ----------------------------------------- */
+/* SECCIÓN CABÁRCENO – MISMA ESTRUCTURA CIUDADES */
+/* ----------------------------------------- */
+
+.seccion-cabarceno {
     display: flex;
-    transition: transform 0.4s ease-in-out;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--color-fondo1);
+    color: var(--color-texto1);
 }
 
-/* Tamaño estable */
-.carrusel img {
-    width: 350px;
-    height: 230px;
+.cabarceno-texto {
+    width: 40%;
+    padding-left: 5%;
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 300;
+}
+
+.cabarceno-imagen img {
+
+    width: 65vw;
+    height: 80%;
+    margin-top: 50px;
     object-fit: cover;
-    
-    margin-right: 25px;
+
 }
 
-/* Puntos */
-.puntos {
+.cabarceno-texto h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 4rem;
+    font-weight: 200;
+    margin-bottom: 25px;
+}
+
+.cabarceno-texto p {
+    width: 400px;
+    text-align: justify;
+}
+
+
+
+.boton-cabarceno {
+    display: inline-block;
+    background: var(--color-texto1);
+    color: var(--color-fondo1);
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
     margin-top: 20px;
     text-align: center;
-    z-index: 100;
+    width: 400px;
 }
 
-.puntos span {
-    height: 14px;
-    width: 14px;
-    background-color: var(--color-fondo2);
-    margin: 6px;
-    display: inline-block;
-    border-radius:100% ;
-    cursor: pointer;
-    transition: 0.3s;
+
+
+/* SECCIÓN DEPORTE – MISMA ESTRUCTURA NATURALEZA */
+
+
+.seccion-deporte {
+    display: flex;
+    width: 100%;
+    background-color: var(--color-fondo1);
+    color: var(--color-texto1);
+    min-height: 60vh;
 }
 
-.puntos span:hover {
-    transform: scale(1.25);
+.deporte-imagen img {
+    width: 65vw;
+    height: 70%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-top: 50px;
 }
 
-.puntos .activo {
-    background-color: var(--color-texto2);
-    transform: scale(1.35);
+.deporte-texto {
+    width: 50%;
+    padding: 20px 60px;
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 300;
 }
+
+.deporte-texto h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.deporte-texto p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    max-width: 600px;
+    text-align: justify;
+}
+
+
+/* LOADER */
+#loader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1F5148;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: top 1s ease-in-out;
+}
+
+#loader-logo {
+    width: 150px;
+    animation: blink 1.2s infinite ease-in-out;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+}
+
+/* Evitar desbordes en secciones con imágenes grandes */
+.seccion-naturaleza,
+.ciudades-villas-contenedor,
+.seccion-playas,
+.seccion-cabarceno,
+.seccion-deporte {
+    overflow-x: hidden;
+}
+
+
+/* --- Carrusel para Ciudades (compatible con tus 290x450) --- */
+.carousel-ciudades {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px; /* deja espacio para los bullets */
+  align-self: flex-end; /* encaja con el layout existente */
+}
+
+/* pista / track (fila de items) */
+.ciudades-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+/* cada tarjeta mantiene las medidas que ya usas */
+.ciudades-item {
+  flex: 0 0 290px; /* fija ancho igual que tus imágenes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* reutiliza tus reglas de imagen (si ya las tienes) */
+.ciudades-item img {
+  width: 290px;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  
+}
+
+
+
+.ciudades-prev { left: 6px; }
+.ciudades-next { right: 6px; }
+
+.ciudades-prev:hover,
+.ciudades-next:hover { background: rgba(0,0,0,0.55); }
+
+
+
+

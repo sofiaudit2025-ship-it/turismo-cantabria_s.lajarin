@@ -5,16 +5,25 @@
         <title>Cantabria Infinita</title>
         <meta charset="utf-8">
         <link rel="Stylesheet" href="css/styles.css">
-        <script src="java/jquery-3.7.1.min.js"></script>
-        <script src="java/script.js"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/script.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="imagenes/logo_cantabria.png" type="image/png">
     </head>
     <body>
+    
+      <div id="loader">
+        <img id="loader-logo" src="imagenes/cantabria_infinita_loader.svg" alt="logo cargando">
+        <div id="loader-fill"></div>
+      </div>
+    
+    
+    
       <nav id="menu">
         <div class="menu-contenedor">
 
@@ -56,6 +65,9 @@
             Cantabria es mar y montaña en pocos kilómetros. Un destino ideal si buscas naturaleza, pueblos con historia, buena comida y planes al aire libre sin masificaciones extremas. No es el Caribe ni los Alpes, pero su equilibrio es justo lo que la hace especial.
         </p>
     </div>
+    <div class="scroll-down">
+         <i class="fi fi-rs-angle-down"></i>
+    </div>
   </section>
 
 
@@ -94,37 +106,102 @@
 
   </section>
 
-  <section class="seccion-ciudades">
-
+<section class="ciudades-villas-contenedor">
     <div class="ciudades-texto">
-        <h2>Ciudades y Villas</h2>
+        
+      <h2>Ciudades <br>y villas</h2>
+      <p>
+          Cantabria cuenta con ciudades y villas muy diferentes entre sí. Santander destaca por su bahía y su vida cultural; Santillana del Mar conserva un marcado carácter medieval; Comillas combina playa y modernismo; y Castro Urdiales une historia y ambiente marinero. Todas reflejan la diversidad y el carácter de Cantabria.
+        </p>
+
+        
+    </div>
+
+ <div class="ciudades-imagenes">
+
+        <button class="ciudades-prev">
+            <i class="fi fi-rs-angle-double-small-left"></i>
+        </button>
+
+        <button class="ciudades-prev">
+            <i class="fi fi-rs-angle-double-small-right"></i>
+        </button>
+
+
+    <div class="ciudades-item">
+      <img src="imagenes/barcena-mayor.webp" alt="Barcena Mayor">
+    </div>
+    <div class="ciudades-item">
+      <img src="imagenes/lierganes.webp" alt="Lierganes">
+    </div>
+    <div class="ciudades-item">
+      <img src="imagenes/mogrovejo.webp" alt="Mogrovejo">
+    </div>
+    <div class="ciudades-item">
+      <img src="imagenes/comillas.webp" alt="Comillas">
+    </div>
+    <div class="ciudades-item">
+      <img src="imagenes/santander.webp" alt="Santander">
+    </div>
+    <div class="ciudades-item">
+      <img src="imagenes/Santillana-del-Mar.webp" alt="Santillana del Mar">
+    </div>
+  </div>
+
+  <!-- controles -->
+  <button class="ciudades-prev" aria-label="Anterior"><i class="fi fi-rr-angle-left"></i></button>
+  <div class="ciudades-dots" aria-hidden="false"></div>
+  <button class="ciudades-next" aria-label="Siguiente"><i class="fi fi-rr-angle-right"></i></button>
+</div>
+
+</section>
+
+<section class="playas-planes-deporte">
+<!-- PLAYAS -->
+<section class="seccion-playas">
+    <figure class="playas-imagen">
+        <img src="imagenes/playas.webp" alt="Playas de Cantabria">
+    </figure>
+
+    <div class="playas-texto">
+        <h2>Playas</h2>
         <p>
-            Cantabria cuenta con ciudades y villas muy diferentes entre sí. Santander destaca por su bahía y su vida cultural; Santillana del Mar conserva un marcado carácter medieval; Comillas combina playa y modernismo; y Castro Urdiales une historia y ambiente marinero. Todas reflejan la diversidad y el carácter de Cantabria.
+          Las playas de Cantabria son un pequeño tesoro del norte: arenales amplios, calas escondidas, olas perfectas para surfistas y rincones tranquilos para quienes buscan desconectar. Cada una ofrece una experiencia distinta, pero todas comparten el carácter salvaje y la tranquilidad que define esta costa. Un lugar donde el mar, el viento y la luz crean paisajes que nunca se repiten.
         </p>
     </div>
+</section>
 
-    <div class="carrusel-ciudades">
-        <div class="carrusel">
-            <img src="imagenes/barcena-mayor.webp" alt="Barcena Mayor">
-            <img src="imagenes/comillas.webp" alt="Comillas">
-            <img src="imagenes/lierganes.webp" alt="Lierganes">
-            <img src="imagenes/mogrovejo.webp" alt="Mogrovejo">
-            <img src="imagenes/santander.webp" alt="santander">
-            <img src="imagenes/Santillana-del-Mar.webp" alt="Santillana del Mar">
-        </div>
-    
 
-        <div class="puntos">
-          <span class="activo"></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+<!-- CABÁRCENO -->
+<section class="seccion-cabarceno">
+    <div class="cabarceno-texto">
+        <h2>Cabárceno</h2>
+        <p>
+            Cabárceno no es un zoo al uso, sino un espacio natural único donde los animales viven en semilibertad entre montañas, praderas y desfiladeros. Un paisaje modelado por la antigua actividad minera que hoy se ha transformado en un refugio para especies de los cinco continentes. Ideal para recorrer en familia, disfrutar de miradores, teleféricos y observar de cerca la fauna salvaje en un entorno sorprendente.
+        </p>
 
+        <a href="#" class="boton-cabarceno">Consigue ya tus entradas</a>
     </div>
 
+    <figure class="cabarceno-imagen">
+        <img src="imagenes/cabarceno3.jpg" alt="Cabárceno">
+    </figure>
+</section>
+
+
+<!-- DEPORTE -->
+<section class="seccion-deporte">
+    <figure class="deporte-imagen">
+        <img src="imagenes/surf.webp" alt="Surf en Cantabria">
+    </figure>
+
+    <div class="deporte-texto">
+        <h2>Deporte</h2>
+        <p>
+            Cantabria presume de algunas de las playas más espectaculares del norte: largas, salvajes, rodeadas de acantilados o en pleno ambiente urbano. Aquí puedes caminar kilómetros sin agobios, aprender a surfear, desconectar con el sonido de las olas o simplemente contemplar el mar en calma. Cada playa tiene su carácter y todas comparten lo mismo: naturaleza en estado puro.
+        </p>
+    </div>
+</section>
 </section>
 
 
