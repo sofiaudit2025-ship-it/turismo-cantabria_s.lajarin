@@ -33,3 +33,16 @@ window.onload = function() {
 
 };
 
+function actualizarHora() {
+    const ahora = new Date();
+    const hora = ahora.getHours().toString().padStart(2,'0');
+    const minutos = ahora.getMinutes().toString().padStart(2,'0');
+    document.getElementById('hora').textContent = `Hora: ${hora}:${minutos}`;
+}
+
+// Actualizar cada minuto
+actualizarHora();
+setInterval(actualizarHora, 60000);
+
+// Simulación de temperatura (puedes conectar con API real más adelante)
+document.getElementById('temperatura').textContent = `Temperatura: 18°C`;
