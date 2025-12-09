@@ -33,6 +33,8 @@ window.onload = function() {
 
 };
 
+
+/*hora y temperatura*/ 
 document.addEventListener("DOMContentLoaded", () => {
     // Función para actualizar la hora
     function actualizarHora() {
@@ -49,3 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Simulación de temperatura (puedes conectar con API real más adelante)
     document.getElementById('temperatura').textContent = `Temperatura: 18°C`;
 });
+
+/*menu hamburguesa*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("hamburger");
+    const menuMovil = document.getElementById("menuMovil");
+
+    // Abrir menú al hacer click
+    hamburger.addEventListener("click", () => {
+        menuMovil.style.left = "0";
+    });
+});
+
+// Función para cerrar menú
+function closeMenu() {
+    document.getElementById("menuMovil").style.left = "-100%";
+}

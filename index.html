@@ -23,35 +23,46 @@
       </div>
     
     
-    
-      <nav id="menu">
-        <div class="menu-contenedor">
+<header>
+  <nav id="menu">
+    <div class="menu-contenedor">
 
-          <!-- IZQUIERDA: LOGO -->
-          <div class="menu-izquierda">
-            <div class="logo-contenedor">
-            <a href="index.html">
-              <figure>
-                <img class="logo" src="imagenes/cantabria_infinita.png" alt="logo cantabria">
-              </figure>
-          </a>
-</div>
-         </div>
+      <!-- LOGO -->
+      <div class="menu-izquierda">
+        <a href="index.html">
+          <img class="logo" src="imagenes/cantabria_infinita.png" alt="logo cantabria">
+        </a>
+      </div>
 
-    <!-- DERECHA: SOLO ENLACES -->
-          <div class="menu-derecha">
-            <ul class="nav-links">
-              <li><a href="#Historia">Historia</a></li>
-              <li><a href="#Naturaleza">Naturaleza</a></li>
-              <li><a href="#Ciudades">Ciudades y villas</a></li>
-              <li><a href="#Playas">Playas</a></li>
-              <li><a href="#Cabarceno">Cabárceno</a></li>
-            </ul>
-          </div>
+      <!-- ENLACES ESCRITORIO -->
+      <ul class="nav-links">
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#naturaleza">Naturaleza</a></li>
+        <li><a href="#ciudades">Ciudades y Villas</a></li>
+        <li><a href="#playas">Playas</a></li>
+        <li><a href="#cabarceno">Cabárceno</a></li>
+      </ul>
 
-         </div>
-      </nav>
+      <!-- HAMBURGUESA -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
+    </div>
+  </nav>
+
+  <!-- MENÚ MÓVIL -->
+  <nav class="menu-movil" id="menuMovil">
+    <button class="btn-cerrar" onclick="closeMenu()">&times;</button>
+    <a href="#historia" onclick="closeMenu()">Historia</a>
+    <a href="#naturaleza" onclick="closeMenu()">Naturaleza</a>
+    <a href="#ciudades" onclick="closeMenu()">Ciudades y Villas</a>
+    <a href="#playas" onclick="closeMenu()">Playas</a>
+    <a href="#cabarceno" onclick="closeMenu()">Cabárceno</a>
+  </nav>
+</header>   
     <!-- HERO -->
     <section  class="hero">
     <img src="imagenes/cabecera.webp" alt="Paisaje de Cantabria">
@@ -71,7 +82,7 @@
 
 
     <!-- FONDO VERDE -->
-    <section id="Historia" class="seccion-verde">
+    <section id="historia" class="seccion-verde">
         <p>
         Cantabria guarda una historia que va desde el arte rupestre prehistórico hasta villas medievales y legado industrial. Aquí nació una de las primeras grandes expresiones artísticas de la humanidad y aún se respira pasado en calles empedradas y antiguas casonas.
         </p>
@@ -87,7 +98,7 @@
 
   </section>
 
-  <section id="Naturaleza" class="seccion-naturaleza">
+  <section id="naturaleza" class="seccion-naturaleza">
     
     <figure class="naturaleza-imagen">
         <img src="imagenes/naturaleza_cantabria.webp" alt="Paisaje natural de Cantabria">
@@ -105,7 +116,7 @@
 
   </section>
 
-<section id="Ciudades" class="ciudades-villas-contenedor">
+<section id="ciudades" class="ciudades-villas-contenedor">
     <div class="ciudades-texto">
         
       <h2>Ciudades <br>y villas</h2>
@@ -155,7 +166,7 @@
 
 </section>
 
-<section id="Playas" class="seccion-playas">
+<section id="playas" class="seccion-playas">
     
     <figure class="playas-imagen">
         <img src="imagenes/playas.webp" alt="Playas de Cantabria">
@@ -173,7 +184,7 @@
 
   </section>
 
-<section id="Cabarceno" class="cabarceno-seccion">
+<section id="cabarceno" class="cabarceno-seccion">
 
   <div class="cabarceno-texto">
     <h2>Cabárceno</h2>
@@ -197,29 +208,28 @@
 </body>
 
 <footer class="site-footer">
-    <div class="footer-top">
-        <!-- COLUMNA IZQUIERDA: Newsletter -->
-        <div class="footer-column newsletter">
-            <h2>Suscríbete a <br>nuestra newsletter</h2>
-            <p>Recibe las últimas novedades sobre Cantabria.</p>
-            <form>
-                <input type="text" placeholder="Nombre y Apellido">
-                <input type="email" placeholder="Correo electrónico">
-                <button type="submit">Suscribirse</button>
-            </form>
-        </div>
+<div class="footer-top">
+  <div class="footer-column newsletter">
+      <h2>Suscríbete a <br>nuestra newsletter</h2>
+      <p>Recibe las últimas novedades sobre Cantabria.</p>
+      <form>
+          <input type="text" placeholder="Nombre y Apellido">
+          <input type="email" placeholder="Correo electrónico">
+          <button type="submit">Suscribirse</button>
+      </form>
+  </div>
 
-        <!-- COLUMNA DERECHA: Información y contacto -->
-        <div class="footer-column info-contacto">
-            <h3>Contacto</h3>
-            <p>info@cantabrinfinita.es</p>
-            <p>Tel: +34 123 456 789</p>
-            <p>Calle las Cruces, 12, Santander</p>
-            <br>
-            <p id="hora"></p>
-            <p id="temperatura"></p>
-        </div>
-    </div>
+  <div class="footer-column info-contacto">
+      <h3>Contacto</h3>
+      <p>info@cantabrinfinita.es</p>
+      <p>Tel: +34 123 456 789</p>
+      <p>Calle las Cruces, 12, Santander</p>
+      <div class="weather-box">
+          <p id="hora"></p>
+          <p id="temperatura"></p>
+      </div>
+  </div>
+</div>
 
     <!-- Línea horizontal -->
     <div class="footer-separator"></div>
