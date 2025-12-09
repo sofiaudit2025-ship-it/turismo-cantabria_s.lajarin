@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>Cantabria Infinita</title>
+        <meta charset="utf-8">
+        <link rel="Stylesheet" href="css/styles.css">
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="imagenes/logo_cantabria.png" type="image/png">
+    </head>
+<body>
+    
+      <div id="loader">
+        <img id="loader-logo" src="imagenes/cantabria_infinita_loader.svg" alt="logo cargando">
+        <div id="loader-fill"></div>
+      </div>
+    
+    
+<header>
+  <nav id="menu">
+    <div class="menu-contenedor">
+
+      <!-- LOGO -->
+      <div class="menu-izquierda">
+        <a href="index.html">
+          <img class="logo" src="imagenes/cantabria_infinita.png" alt="logo cantabria">
+        </a>
+      </div>
+
+      <!-- ENLACES ESCRITORIO -->
+      <ul class="nav-links">
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#naturaleza">Naturaleza</a></li>
+        <li><a href="#ciudades">Ciudades y Villas</a></li>
+        <li><a href="#playas">Playas</a></li>
+        <li><a href="#cabarceno">Cabárceno</a></li>
+      </ul>
+
+      <!-- HAMBURGUESA -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MENÚ MÓVIL -->
+  <nav class="menu-movil" id="menuMovil">
+    <button class="btn-cerrar" onclick="closeMenu()">&times;</button>
+    <a href="#historia" onclick="closeMenu()">Historia</a>
+    <a href="#naturaleza" onclick="closeMenu()">Naturaleza</a>
+    <a href="#ciudades" onclick="closeMenu()">Ciudades y Villas</a>
+    <a href="#playas" onclick="closeMenu()">Playas</a>
+    <a href="#cabarceno" onclick="closeMenu()">Cabárceno</a>
+  </nav>
+</header>
+
+<section class="portada">
+    <!-- Aquí insertas tu imagen de fondo -->
+    <img src="imagenes/imagenespg2/portada-cabarceno.webp" alt="Paisaje de Cabárceno">
+
+    <div class="overlay"></div>
+
+    <div class="portada-contenido">
+        <h1>Descubre <span>Cabárceno</span></h1>
+        <p>
+            El Parque de la Naturaleza de Cabárceno ofrece un encuentro único con animales en semilibertad, en un entorno impresionante de montañas y lagos. Observa osos, lobos, linces y muchas otras especies mientras disfrutas de un día en contacto con la naturaleza.
+        </p>
+    </div>
+
+    <div class="scroll-down">
+        <i class="fi fi-rs-angle-down"></i>
+    </div>
+</section>
+
+<section id="introduccion" class="seccion-introduccion">
+    <figure class="intro-imagen">
+        <img src="imagenes/imagenespg2/intro-cabarceno.webp" alt="Cabárceno panorama">
+    </figure>
+    <div class="intro-texto">
+        <h2>Cabárceno</h2>
+        <p>
+            Situado en Cantabria, el Parque de la Naturaleza de Cabárceno es un espacio único donde animales de todo el mundo viven en semi-libertad. En su extensión de más de 750 hectáreas, podrás observar osos, linces, elefantes, gorilas y muchas otras especies mientras paseas por carreteras y senderos rodeados de un paisaje espectacular.
+            <br><br>
+            Además de la fauna, Cabárceno ofrece servicios como cafeterías, zonas de picnic, visitas guiadas, talleres educativos y un teleférico que permite admirar el parque desde el aire. Es un lugar ideal para toda la familia, con actividades y espacios adaptados para niños y adultos.
+        </p>
+    </div>
+</section>
+
+<!-- FICHA / DATOS RÁPIDOS -->
+<section id="ficha" class="seccion-ficha">
+    <h2>Datos rápidos</h2>
+    <div class="ficha-grid">
+        <div class="ficha-item">
+            <i class="fa-solid fa-paw"></i>
+            <p>Más de 100 especies animales</p>
+        </div>
+        <div class="ficha-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Situado en Cantabria, España</p>
+        </div>
+        <div class="ficha-item">
+            <i class="fa-solid fa-clock"></i>
+            <p>Horario: 9:30 - 18:00</p>
+        </div>
+        <div class="ficha-item">
+            <i class="fa-solid fa-ticket"></i>
+            <p>Entrada: Adultos 30€, Niños 15€</p>
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA / CARRUSEL -->
+<section id="galeria" class="seccion-galeria">
+    <h2>Galería de imágenes</h2>
+    <div class="carrusel">
+        <!-- Añadir aquí imágenes del carrusel -->
+        <img src="imagenes/imagenespg2/galeria1.webp" alt="Galería Cabárceno 1">
+        <img src="imagenes/imagenespg2/galeria2.webp" alt="Galería Cabárceno 2">
+        <img src="imagenes/imagenespg2/galeria3.webp" alt="Galería Cabárceno 3">
+    </div>
+</section>
+
+<!-- GRÁFICA DE CLIMA Y VISITANTES -->
+<section id="grafica" class="seccion-grafica">
+    <h2>Clima y visitantes</h2>
+    <canvas id="chartCabarceno"></canvas>
+</section>
+
+<!-- ACTIVIDADES Y SERVICIOS -->
+<section id="actividades" class="seccion-actividades">
+    <h2>Servicios y actividades</h2>
+    <div class="actividades-grid">
+        <div class="actividad-item">
+            <i class="fa-solid fa-bus"></i>
+            <p>Transporte dentro del parque</p>
+        </div>
+        <div class="actividad-item">
+            <i class="fa-solid fa-cafe"></i>
+            <p>Cafeterías y restaurantes</p>
+        </div>
+        <div class="actividad-item">
+            <i class="fa-solid fa-tree"></i>
+            <p>Zonas de picnic y descanso</p>
+        </div>
+        <div class="actividad-item">
+            <i class="fa-solid fa-chalkboard-teacher"></i>
+            <p>Talleres educativos</p>
+        </div>
+    </div>
+</section>
+
+<!-- CÓMO LLEGAR -->
+<section id="como-llegar" class="seccion-como-llegar">
+    <div class="como-texto">
+        <h2>Cómo llegar a Cabárceno</h2>
+        <p>
+            El Parque de Cabárceno se encuentra a unos 17 km de Santander. Puedes llegar en coche, transporte público o excursiones organizadas.  
+            <br>Parking gratuito disponible dentro del parque.  
+            <br>Autobuses y taxis desde Santander y Torrelavega.  
+            <br>Coordenadas GPS: 43.3978° N, 3.8296° W
+        </p>
+    </div>
+    <div class="como-mapa">
+        <!-- Aquí va el mapa -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+
+
+</body>
+
+<footer class="site-footer">
+<div class="footer-top">
+  <div class="footer-column newsletter">
+      <h2>Suscríbete a <br>nuestra newsletter</h2>
+      <p>Recibe las últimas novedades sobre Cantabria.</p>
+      <form>
+          <input type="text" placeholder="Nombre y Apellido">
+          <input type="email" placeholder="Correo electrónico">
+          <button type="submit">Suscribirse</button>
+      </form>
+  </div>
+
+  <div class="footer-column info-contacto">
+      <h3>Contacto</h3>
+      <p>info@cantabrinfinita.es</p>
+      <p>Tel: +34 123 456 789</p>
+      <p>Calle las Cruces, 12, Santander</p>
+      <div class="weather-box">
+          <p id="hora"></p>
+          <p id="temperatura"></p>
+      </div>
+  </div>
+</div>
+
+    <!-- Línea horizontal -->
+    <div class="footer-separator"></div>
+
+    <!-- LOGOS DE ENTIDADES -->
+    <div class="footer-logos">
+        <img src="imagenes/Logotipo_del_Gobierno_de_Cantabria.svg" alt="Logo Gobierno de Cantabria">
+        <img src="imagenes/santandercruise-300x169.png" alt="Logo Turismo Santander">
+        <img src="imagenes/cantabria_infinita.png" alt="Logo Cantabria Infinita">
+        <img src="imagenes/Logotipo_del_Ministerio_de_Industria_y_Turismo.svg.png" alt="Logo Ministerio Industria y Turismo">
+        <img src="imagenes/ES_Financiado_por_la_Union_Europea.webp" alt="Logo Unión Europea">
+    </div>
+
+    <!-- DERECHOS RESERVADOS -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Cantabria Infinita. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+
+</html>
