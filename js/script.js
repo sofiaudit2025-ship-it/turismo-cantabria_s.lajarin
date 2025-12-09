@@ -68,3 +68,15 @@ document.addEventListener("DOMContentLoaded", function() {
 function closeMenu() {
     document.getElementById("menuMovil").style.left = "-100%";
 }
+
+//carrusel
+
+$(document).ready(function() {
+    let width = $('.carrusel-item').outerWidth(true);
+    $('#next').click(function() {
+        $('.carrusel-track').animate({scrollLeft: '+= ' + width}, 500);
+    });
+    $('#prev').click(function() {
+        $('.carrusel-track').animate({scrollLeft: '-= ' + width}, 500);
+    });
+});

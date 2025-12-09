@@ -66,7 +66,7 @@
 
 <section class="portada">
     <!-- Aquí insertas tu imagen de fondo -->
-    <img src="imagenes/imagenespg2/portada-cabarceno.webp" alt="Paisaje de Cabárceno">
+    <img src="imagenes/imagenespg2/portada-cabarceno-1.webp" alt= Paisaje de Cabárceno>
 
     <div class="overlay"></div>
 
@@ -84,10 +84,10 @@
 
 <section id="introduccion" class="seccion-introduccion">
     <figure class="intro-imagen">
-        <img src="imagenes/imagenespg2/intro-cabarceno.webp" alt="Cabárceno panorama">
+        <img src="imagenes/imagenespg2/osos-cabarceno.jpg" alt="Cabárceno panorama">
     </figure>
     <div class="intro-texto">
-        <h2>Cabárceno</h2>
+        
         <p>
             Situado en Cantabria, el Parque de la Naturaleza de Cabárceno es un espacio único donde animales de todo el mundo viven en semi-libertad. En su extensión de más de 750 hectáreas, podrás observar osos, linces, elefantes, gorilas y muchas otras especies mientras paseas por carreteras y senderos rodeados de un paisaje espectacular.
             <br><br>
@@ -98,7 +98,7 @@
 
 <!-- FICHA / DATOS RÁPIDOS -->
 <section id="ficha" class="seccion-ficha">
-    <h2>Datos rápidos</h2>
+    <h2>¿Qué debes de saber?</h2>
     <div class="ficha-grid">
         <div class="ficha-item">
             <i class="fa-solid fa-paw"></i>
@@ -114,7 +114,23 @@
         </div>
         <div class="ficha-item">
             <i class="fa-solid fa-ticket"></i>
-            <p>Entrada: Adultos 30€, Niños 15€</p>
+            <p>Adultos 30€ - Niños 15€</p>
+        </div>
+        <div class="ficha-item">
+            <i class="fa-solid fa-bus"></i>
+            <p>Transporte dentro del parque</p>
+        </div>
+        <div class="ficha-item">
+            <i class="fa-solid fa-utensils"></i>"></i>
+            <p>Cafeterías y restaurantes</p>
+        </div>
+        <div class="ficha-item">
+            <i class="fa-solid fa-tree"></i>
+            <p>Zonas de picnic y descanso</p>
+        </div>
+        <div class="ficha-item">
+            <i class="fa-solid fa-chalkboard-teacher"></i>
+            <p>Talleres educativos</p>
         </div>
     </div>
 </section>
@@ -122,57 +138,52 @@
 <!-- GALERÍA / CARRUSEL -->
 <section id="galeria" class="seccion-galeria">
     <h2>Galería de imágenes</h2>
-    <div class="carrusel">
-        <!-- Añadir aquí imágenes del carrusel -->
-        <img src="imagenes/imagenespg2/galeria1.webp" alt="Galería Cabárceno 1">
-        <img src="imagenes/imagenespg2/galeria2.webp" alt="Galería Cabárceno 2">
-        <img src="imagenes/imagenespg2/galeria3.webp" alt="Galería Cabárceno 3">
+<div class="carrusel">
+    <div class="carrusel-track">
+        <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/aguila.webp" alt="aguila">
+        </figure>
+        <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/buitre.webp" alt="buitre">
+        </figure>
+        <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/ciervo.png" alt="ciervo">
+        </figure>
+        <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/leon.png" alt="leon">
+        </figure>
+                <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/lince.png" alt="lince">
+        </figure>
+                <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/mono-2.webp" alt="mono"> 
+        </figure>
     </div>
+</div>
 </section>
 
-<!-- GRÁFICA DE CLIMA Y VISITANTES -->
+
 <section id="grafica" class="seccion-grafica">
     <h2>Clima y visitantes</h2>
-    <canvas id="chartCabarceno"></canvas>
-</section>
-
-<!-- ACTIVIDADES Y SERVICIOS -->
-<section id="actividades" class="seccion-actividades">
-    <h2>Servicios y actividades</h2>
-    <div class="actividades-grid">
-        <div class="actividad-item">
-            <i class="fa-solid fa-bus"></i>
-            <p>Transporte dentro del parque</p>
-        </div>
-        <div class="actividad-item">
-            <i class="fa-solid fa-cafe"></i>
-            <p>Cafeterías y restaurantes</p>
-        </div>
-        <div class="actividad-item">
-            <i class="fa-solid fa-tree"></i>
-            <p>Zonas de picnic y descanso</p>
-        </div>
-        <div class="actividad-item">
-            <i class="fa-solid fa-chalkboard-teacher"></i>
-            <p>Talleres educativos</p>
-        </div>
+    <div class="grafica-contenedor">
+        <canvas id="chartCabarceno"></canvas>
     </div>
 </section>
 
 <!-- CÓMO LLEGAR -->
 <section id="como-llegar" class="seccion-como-llegar">
     <div class="como-texto">
-        <h2>Cómo llegar a Cabárceno</h2>
+        <h2>Cómo llegar <br>a Cabárceno</h2>
         <p>
-            El Parque de Cabárceno se encuentra a unos 17 km de Santander. Puedes llegar en coche, transporte público o excursiones organizadas.  
+            El Parque se encuentra a unos 17 km de Santander.<br>
+            Puedes llegar en coche o transporte público.  
             <br>Parking gratuito disponible dentro del parque.  
             <br>Autobuses y taxis desde Santander y Torrelavega.  
-            <br>Coordenadas GPS: 43.3978° N, 3.8296° W
         </p>
     </div>
     <div class="como-mapa">
         <!-- Aquí va el mapa -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.153350768641!2d-3.828106823966166!3d43.357869521117685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4936a0b0136e1d%3A0x9c2f586c48203b05!2s39627%20Cab%C3%A1rceno%2C%20Cantabria!5e1!3m2!1ses!2ses!4v1765319246929!5m2!1ses!2ses" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 
