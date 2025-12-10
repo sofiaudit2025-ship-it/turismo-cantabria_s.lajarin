@@ -70,13 +70,70 @@ function closeMenu() {
 }
 
 //carrusel
-
 $(document).ready(function() {
+    // CARRUSEL
+    let $track = $('.carrusel-track');
     let width = $('.carrusel-item').outerWidth(true);
-    $('#next').click(function() {
-        $('.carrusel-track').animate({scrollLeft: '+= ' + width}, 500);
+
+    $('.carrusel-next').click(function() {
+        $track.animate({ scrollLeft: '+=' + width }, 500);
     });
-    $('#prev').click(function() {
-        $('.carrusel-track').animate({scrollLeft: '-= ' + width}, 500);
+
+    $('.carrusel-prev').click(function() {
+        $track.animate({ scrollLeft: '-=' + width }, 500);
+    });
+
+    // MODAL
+    let items = $(".carrusel-item img"); 
+    let indexActual = 0;
+
+    const infoAnimales = {
+        "Águila": "Las águilas son rapaces majestuosas con una visión excepcional.",
+        "Búho real": "El búho real es una de las aves nocturnas más grandes del mundo.",
+        "Buitre": "Los buitres cumplen una función esencial como carroñeros.",
+        "Ciervo": "El ciervo es uno de los mamíferos más representativos de Cabárceno.",
+        "Ciervos": "Manadas de ciervos pueden verse en zonas amplias del parque.",
+        "Eland": "El eland es el antílope más grande del mundo.",
+        "Lago": "El lago de Cabárceno es uno de los paisajes más icónicos del parque.",
+        "León": "El león, el rey de la sabana, vive en semilibertad en Cabárceno.",
+        "Lince": "El lince ibérico es uno de los felinos más amenazados del mundo.",
+        "Mono": "Los primates del parque muestran una gran variedad de comportamientos.",
+        "Pantera": "La pantera negra es una variación melanística de varios leopardos."
+    };
+
+    // ABRIR MODAL
+    items.click(function () {
+        indexActual = items.index(this);
+        mostrarImagen(indexActual);
+        $("#modalAnimal").fadeIn().css("display", "flex");
+    });
+
+    // CERRAR MODAL
+    $(".modal-close, .modal").click(function (e) {
+        if (e.target !== this) return;
+        $("#modalAnimal").fadeOut();
+    });
+
+    // MOSTRAR FOTO + TEXTO
+    function mostrarImagen(index) {
+        let img = items.eq(index);
+        let nombre = img.attr("alt");
+
+        $("#modalImg").attr("src", img.attr("src"));
+        $("#modalTitulo").text(nombre);
+        $("#modalTexto").text(infoAnimales[nombre] || "Información no disponible.");
+    }
+
+    // SIGUIENTE / ANTERIOR
+    $(".modal-next").click(function (e) {
+        e.stopPropagation();
+        indexActual = (indexActual + 1) % items.length;
+        mostrarImagen(indexActual);
+    });
+
+    $(".modal-prev").click(function (e) {
+        e.stopPropagation();
+        indexActual = (indexActual - 1 + items.length) % items.length;
+        mostrarImagen(indexActual);
     });
 });

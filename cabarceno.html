@@ -36,11 +36,11 @@
 
       <!-- ENLACES ESCRITORIO -->
       <ul class="nav-links">
-        <li><a href="#historia">Historia</a></li>
-        <li><a href="#naturaleza">Naturaleza</a></li>
-        <li><a href="#ciudades">Ciudades y Villas</a></li>
+        <li><a href="#introducción">Historia</a></li>
+        <li><a href="#ficha">Información</a></li>
+        <li><a href="#galeria">Galería</a></li>
         <li><a href="#playas">Playas</a></li>
-        <li><a href="#cabarceno">Cabárceno</a></li>
+        <li><a href="#como-llegar">¿Cómo llegar?</a></li>
       </ul>
 
       <!-- HAMBURGUESA -->
@@ -56,11 +56,11 @@
   <!-- MENÚ MÓVIL -->
   <nav class="menu-movil" id="menuMovil">
     <button class="btn-cerrar" onclick="closeMenu()">&times;</button>
-    <a href="#historia" onclick="closeMenu()">Historia</a>
-    <a href="#naturaleza" onclick="closeMenu()">Naturaleza</a>
-    <a href="#ciudades" onclick="closeMenu()">Ciudades y Villas</a>
+    <a href="#introduccion" onclick="closeMenu()">¿Quién somos?</a>
+    <a href="#ficha" onclick="closeMenu()">Información</a>
+    <a href="#galeria" onclick="closeMenu()">Galería</a>
     <a href="#playas" onclick="closeMenu()">Playas</a>
-    <a href="#cabarceno" onclick="closeMenu()">Cabárceno</a>
+    <a href="#como-llegar" onclick="closeMenu()">¿Cómo llegar?</a>
   </nav>
 </header>
 
@@ -87,7 +87,7 @@
         <img src="imagenes/imagenespg2/osos-cabarceno.jpg" alt="Cabárceno panorama">
     </figure>
     <div class="intro-texto">
-        
+        <h2>¿Quién somos?</h2>
         <p>
             Situado en Cantabria, el Parque de la Naturaleza de Cabárceno es un espacio único donde animales de todo el mundo viven en semi-libertad. En su extensión de más de 750 hectáreas, podrás observar osos, linces, elefantes, gorilas y muchas otras especies mientras paseas por carreteras y senderos rodeados de un paisaje espectacular.
             <br><br>
@@ -140,28 +140,67 @@
     <h2>Galería de imágenes</h2>
 <div class="carrusel">
     <div class="carrusel-track">
+
+        <div class="carrusel">
+            <button class="carrusel-prev">&#10094;</button>
+        <div class="carrusel-track">
         <figure class="carrusel-item">
-            <img src="imagenes/imagenespg2/aguila.webp" alt="aguila">
+            <img src="imagenes/imagenespg2/aguila.webp" alt="Águila">
         </figure>
         <figure class="carrusel-item">
-            <img src="imagenes/imagenespg2/buitre.webp" alt="buitre">
+            <img src="imagenes/imagenespg2/buho-real.png" alt="Búho real"> 
         </figure>
         <figure class="carrusel-item">
-            <img src="imagenes/imagenespg2/ciervo.png" alt="ciervo">
+            <img src="imagenes/imagenespg2/buitre.webp" alt="Buitre">
         </figure>
         <figure class="carrusel-item">
-            <img src="imagenes/imagenespg2/leon.png" alt="leon">
+            <img src="imagenes/imagenespg2/ciervo.png" alt="Ciervo">
+        </figure>
+        <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/ciervos.png" alt="Ciervos"> 
+        </figure>
+        <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/eland.png" alt="Eland"> 
+        </figure>
+        <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/cabarceno-lago.jpg" alt="Lago"> 
+        </figure>
+        <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/leon.png" alt="León">
         </figure>
                 <figure class="carrusel-item">
-            <img src="imagenes/imagenespg2/lince.png" alt="lince">
+            <img src="imagenes/imagenespg2/lince.png" alt="Lince">
         </figure>
                 <figure class="carrusel-item">
-            <img src="imagenes/imagenespg2/mono-2.webp" alt="mono"> 
+            <img src="imagenes/imagenespg2/mono-2.webp" alt="Mono"> 
+        </figure>
+        <figure class="carrusel-item">
+            <img src="imagenes/imagenespg2/pantera.png" alt="Pantera"> 
         </figure>
     </div>
+        </div>
+            <button class="carrusel-next">&#10095;</button>
+        </div>
 </div>
-</section>
 
+<div id="modalAnimal" class="modal">
+    <div class="modal-content">
+
+        <span class="modal-close">×</span>
+
+        <button class="modal-prev">‹</button>
+        <img id="modalImg" src="" alt="">
+        <button class="modal-next">›</button>
+
+        <div class="modal-info">
+            <h3 id="modalTitulo"></h3>
+            <p id="modalTexto"></p>
+        </div>
+
+    </div>
+</div>
+
+</section>
 
 <section id="grafica" class="seccion-grafica">
     <h2>Clima y visitantes</h2>

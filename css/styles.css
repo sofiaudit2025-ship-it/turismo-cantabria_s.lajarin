@@ -403,7 +403,7 @@ nav#menu img.logo {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #1F5148;
+    background-color: var(--color-fondo1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -493,7 +493,7 @@ nav#menu img.logo {
   border: none;
   background: none;
   font-size: 2rem;
-  color: white;
+  color: var(--color-texto1);
   cursor: pointer;
   z-index: 10;
   opacity: 0.7;
@@ -539,7 +539,7 @@ nav#menu img.logo {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.4); /* color negro con opacidad */
-    color: #fff;
+    color: var(--color-texto1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1457,7 +1457,8 @@ body, html {
 
 .intro-texto h2 {
     font-family: var(--fuente-titulos);
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 200;
     margin-bottom: 20px;
     color: var(--color-principal);
 }
@@ -1608,7 +1609,7 @@ body, html {
 }
 
 /* --- Carrusel Animales --- */
-/* Cambiar fondo de la sección */
+
 .seccion-galeria {
     background-color: var(--color-fondo2);
     padding: 60px 20px;
@@ -1628,7 +1629,7 @@ body, html {
 .carrusel {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     margin: 40px 0;
     background-color: var(--color-fondo2);
 }
@@ -1680,6 +1681,7 @@ body, html {
     line-height: 1.4;
 }
 
+
 /* Botones de navegación */
 .carrusel-prev,
 .carrusel-next {
@@ -1687,21 +1689,20 @@ body, html {
     top: 50%;
     transform: translateY(-50%);
     border: none;
-    
+    background: transparent;
     color: var(--color-texto1);
     font-size: 2rem;
-    padding: 10px;
-    
+    padding: 12px;
     cursor: pointer;
-    z-index: 10;
-    
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.carrusel-prev:hover,
-.carrusel-next:hover {
-    background: rgba(0,0,0,0.6);
-}
 
+
+/* Posiciones */
 .carrusel-prev { left: 10px; }
 .carrusel-next { right: 10px; }
 
@@ -1710,8 +1711,8 @@ body, html {
     display: none;
 }
 .carrusel-track {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
 }
 
 /* Responsive */
@@ -1736,6 +1737,110 @@ body, html {
     }
 }
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--color-fondo1);
+    padding: 20px;
+    max-width: 80%;
+    width: 700px;
+    text-align: center;
+    z-index: 9999;
+}
+
+#modalImg {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+@keyframes aparecer {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content img {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 2rem;
+    color:var(--color-texto1);
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.modal-info {
+    margin-top: 20px;
+}
+
+.modal-info h3,
+.modal-info p {
+    color:var(--color-texto1);
+}
+
+.modal-info h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    margin-top: 15px;
+    color: var(--color-texto1);
+    font-weight: 200;
+}
+
+.modal-info p {
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: 200;
+    color: var(--color-texto1);
+}
+
+#modalImg {
+    width: 100%;
+    height: auto;
+    
+}
+
+/* Flechas navegación */
+.modal-prev,
+.modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: var(--color-texto1);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10000;
+}
+
+.modal-prev { left: -50px; }
+.modal-next { right: -50px; }
+
+.modal-prev:hover,
+.modal-next:hover {
+    color: var(--color-texto1);
+}
+
+/*como llegar*/
 .seccion-como-llegar {
   display: flex;
   flex-wrap: wrap;
@@ -1757,6 +1862,7 @@ body, html {
   font-size: 4rem;
   margin-top: 80px;
   line-height: 1;
+  font-weight: 200;
 }
 
 .como-texto p {
