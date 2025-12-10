@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="imagenes/logo_cantabria.png" type="image/png">
@@ -36,10 +37,10 @@
 
       <!-- ENLACES ESCRITORIO -->
       <ul class="nav-links">
-        <li><a href="#introducción">Historia</a></li>
+        <li><a href="#introduccion">¿Quiénes somos?</a></li>
         <li><a href="#ficha">Información</a></li>
         <li><a href="#galeria">Galería</a></li>
-        <li><a href="#playas">Playas</a></li>
+        <li><a href="#grafica">Visitas</a></li>
         <li><a href="#como-llegar">¿Cómo llegar?</a></li>
       </ul>
 
@@ -56,7 +57,7 @@
   <!-- MENÚ MÓVIL -->
   <nav class="menu-movil" id="menuMovil">
     <button class="btn-cerrar" onclick="closeMenu()">&times;</button>
-    <a href="#introduccion" onclick="closeMenu()">¿Quién somos?</a>
+    <a href="#introduccion" onclick="closeMenu()">¿Quiénes somos?</a>
     <a href="#ficha" onclick="closeMenu()">Información</a>
     <a href="#galeria" onclick="closeMenu()">Galería</a>
     <a href="#playas" onclick="closeMenu()">Playas</a>
@@ -87,7 +88,7 @@
         <img src="imagenes/imagenespg2/osos-cabarceno.jpg" alt="Cabárceno panorama">
     </figure>
     <div class="intro-texto">
-        <h2>¿Quién somos?</h2>
+        <h2>¿Quiénes somos?</h2>
         <p>
             Situado en Cantabria, el Parque de la Naturaleza de Cabárceno es un espacio único donde animales de todo el mundo viven en semi-libertad. En su extensión de más de 750 hectáreas, podrás observar osos, linces, elefantes, gorilas y muchas otras especies mientras paseas por carreteras y senderos rodeados de un paisaje espectacular.
             <br><br>
@@ -203,9 +204,21 @@
 </section>
 
 <section id="grafica" class="seccion-grafica">
-    <h2>Clima y visitantes</h2>
-    <div class="grafica-contenedor">
-        <canvas id="chartCabarceno"></canvas>
+    
+    <div class="grafica-contenido">
+
+        <div class="grafica-lienzo">
+            <canvas id="barras"></canvas>
+        </div>
+
+        <div class="grafica-texto">
+        <h2>Estadísticas <br>de Visitas</h2>
+        <p>
+            Aquí puedes ver cómo ha evolucionado el número de visitas a lo largo de este año. <br> Esta gráfica se actualiza según los datos que vayamos generando.
+        </p>
+        </div>
+            
+
     </div>
 </section>
 

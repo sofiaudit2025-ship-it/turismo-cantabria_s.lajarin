@@ -137,3 +137,99 @@ $(document).ready(function() {
         mostrarImagen(indexActual);
     });
 });
+
+// Datos reales
+const labels = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
+                'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
+const data = {
+    labels: labels,
+    datasets: [{
+        label: 'Visitas al Parque',
+        data: [250, 400, 350, 500, 600, 450, 700, 750, 600, 500, 450, 300], // visitas simuladas
+        fill: true,
+        borderColor: 'green',
+        backgroundColor: 'rgba(0,128,0,0.2)', // verde semi-transparente
+        tension: 0.4 // suaviza la curva
+    }]
+};
+
+const config = {
+    type: 'line',
+    data: data,
+    options: {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Visitas mensuales al Parque',
+                font: { size: 20 }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+};
+
+//Chart.js
+
+function cargaGraficoBarras() {
+    // Datos para generar el gráfico, hay que definir las etiquetas y
+    // los datasets. Hay que definir un color para cada dataset
+    var datos = {
+        labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+        datasets: [{
+            label: "Número de visitas al parque en 2024",
+            backgroundColor: "#1F5148",
+            data: [15.000, 14.000, 60.089, 35.000, 64.095, 70.000, 120.000, 164.159, 65.000, 30.000, 33.147, 31.204]
+        }],
+    };
+
+    // Configuración del gráfico. Debe incluir imprescindiblemente el
+    // tipo de gráfico y los datos que hemos definido previamente.
+    // Se pueden añadir opciones para personalizar el gráfico
+    var config = {
+        type: "bar",
+        data: datos,
+        options: {
+            scales: {
+                x: {
+                    border: {
+                        color: "#F5F1EE",
+                        width: 2
+                    },
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                    min: 0,
+                    max: 200.000,
+                    title: {
+                        display: true,
+                        text: "Cantidad de visitantes mensuales en miles"
+                    },
+                    border: {
+                        color: "#F5F1EE",
+                        width: 2
+                    }
+                }
+            }
+        }
+    };
+
+    // Para crear el gráfico, se busca el elemento canvas por su id
+    // y se le pasa la configuración en JSON que hemos definido
+    var grafico = $("#barras")[0].getContext("2d");
+    new Chart(grafico, config);
+}
+
+
+
+$(document).ready(function () {
+    cargaGraficoBarras();
+
+});

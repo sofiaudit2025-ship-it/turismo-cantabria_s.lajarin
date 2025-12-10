@@ -1612,7 +1612,10 @@ body, html {
 
 .seccion-galeria {
     background-color: var(--color-fondo2);
-    padding: 60px 20px;
+    padding-left:  20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 60px;
     color: var(--color-texto2);
     text-align: center;
 }
@@ -1640,7 +1643,7 @@ body, html {
     overflow-x: auto;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .carrusel-item {
@@ -1868,7 +1871,8 @@ body, html {
 .como-texto p {
   margin-top: 20px;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 .como-mapa {
@@ -1944,27 +1948,124 @@ body, html {
     padding-right: 0;
   }
 }
-
 .seccion-grafica {
-  padding: 4rem 2rem;
-  background-color: var(--color-fondo2);
-  text-align: center;
+    padding: 30px 20px;
+    background-color: var(--color-fondo2);
+    color: var(--color-texto1);
 }
 
-.seccion-grafica h2 {
-  font-family: var(--fuente-titulos);
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  color: var(--color-texto1);
+/* CONTENEDOR PRINCIPAL */
+.grafica-contenido {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 60px;
 }
 
-/* Contenedor del canvas para controlar tamaño y responsividad */
-.grafica-contenedor {
-  max-width: 900px;
-  margin: 0 auto;
+/* GRÁFICA  */
+.grafica-lienzo {
+    flex: 1.3;            
+    display: flex;
+    justify-content: flex-start;
 }
 
-.grafica-contenedor canvas {
-  width: 100% !important;
-  height: 400px !important;
+.grafica-lienzo canvas {
+    width: 100%;
+    max-width: 700px;     
+    background-color: var(--color-fondo2);
+    margin-left: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+}
+
+/* TEXTO A LA DERECHA */
+.grafica-texto {
+    flex: 0.9;
+    text-align: left;
+    width: 200px;
+    padding-right: 40px;
+}
+
+.grafica-texto h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 3.2rem;
+    font-weight: 200;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: var(--color-texto2);
+}
+
+.grafica-texto p {
+    font-family: var(--fuente-texto);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-texto2);
+    width: 400px;
+}
+
+@media screen and (max-width: 900px) {
+    .grafica-contenido {
+        flex-direction: column; /* apila verticalmente */
+        align-items: center; /* centra los elementos */
+        text-align: center;
+        gap: 40px; /* espacio entre gráfico y texto */
+    }
+
+    .grafica-lienzo {
+        flex: 1 1 90%; /* ocupa más ancho disponible */
+        justify-content: center;
+    }
+
+    .grafica-lienzo canvas {
+        max-width: 600px; /* mantiene tamaño grande */
+    }
+
+    .grafica-texto {
+        flex: 1 1 90%;
+        text-align: center; /* texto centrado */
+    }
+
+    .grafica-texto h2 {
+        font-size: 2.6rem;
+    }
+
+    .grafica-texto p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .grafica-contenido {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .grafica-lienzo {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .grafica-lienzo canvas {
+        max-width: 100%; /* ocupa todo el ancho disponible */
+        padding: 15px;
+    }
+
+    .grafica-texto {
+        flex: 1 1 100%;
+        text-align: center; /* centrado */
+    }
+
+    .grafica-texto h2 {
+        font-size: 2rem;
+    }
+
+    .grafica-texto p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
 }
