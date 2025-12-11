@@ -1,26 +1,36 @@
-window.onload = function() {
 
-    /* Pantalla de carga */
+
+ /* Pantalla de carga con java puro
+     window.onload = function() {
+        setTimeout(function() {
+            const loader = document.getElementById("loader");
+            if (loader) {
+                loader.style.top = "-100%";
+            }
+        }, 2000);
+    
+    */
+
+/*pantalla carga con jquery*/ 
     setTimeout(function() {
-        const loader = document.getElementById("loader");
-        if (loader) {
-            loader.style.top = "-100%";
-        }
+    $("#loader").css("top", "-100%");
     }, 2000);
 
-    /* Abre el menú */
+
+/*Menu hamburguesa con java puro */
+    /* Abre el menú 
     function openMenu() {
         document.querySelector(".menu-movil").classList.add("activo");
         document.body.style.overflow = "hidden";
-    }
+    }*/
 
-    /* Cierra el menú */
+    /* Cierra el menú 
     function closeMenu() {
         document.querySelector(".menu-movil").classList.remove("activo");
         document.body.style.overflow = "";
-    }
+    }*/
 
-    /* Deslizar hacia abajo (si existe el icono) */
+    /* Deslizar hacia abajo (si existe el icono) 
     const scrollIcon = document.querySelector(".scroll-down");
     if (scrollIcon) {
         scrollIcon.addEventListener("click", function () {
@@ -32,9 +42,37 @@ window.onload = function() {
     }
 
 };
+*/
 
+/*menu hamburguesa jquery*/
+$("#hamburger").click(function() {
+    $(".menu-movil").addClass("activo");
+    $("body").css("overflow", "hidden");
+});
+$(".btn-cerrar").click(function() {
+    $(".menu-movil").removeClass("activo");
+    $("body").css("overflow", "");
+});
 
-/*hora y temperatura*/ 
+/*scroll flecha en java script puro porque el jquery daba problemas en el funcionamiento*/
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollIcons = document.querySelectorAll(".scroll-down");
+
+    scrollIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            // Buscar la siguiente sección visible
+            let next = icon.closest("section").nextElementSibling;
+            while(next && !(next.tagName === "SECTION" || next.tagName === "DIV")) {
+                next = next.nextElementSibling;
+            }
+            if(next) {
+                next.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
+});
+
+/*hora y temperatura java puro 
 document.addEventListener("DOMContentLoaded", () => {
     // Función para actualizar la hora
     function actualizarHora() {
@@ -50,7 +88,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Simulación de temperatura (puedes conectar con API real más adelante)
     document.getElementById('temperatura').textContent = `Temperatura: 18°C`;
-});
+});*/
+
+
+
+
+/*hora y temperatura jquery*/
+    function actualizarHora() {
+        const ahora = new Date();
+        const hora = ahora.getHours().toString().padStart(2, '0');
+        const minutos = ahora.getMinutes().toString().padStart(2, '0');
+        $("#hora").text(`Hora: ${hora}:${minutos}`);
+    }
+    actualizarHora();
+    setInterval(actualizarHora, 60000);
+    $("#temperatura").text("Temperatura: 18°C");
+
 
 /*menu hamburguesa*/
 
@@ -64,12 +117,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Función para cerrar menú
-function closeMenu() {
-    document.getElementById("menuMovil").style.left = "-100%";
+    // Función para cerrar menú
+    function closeMenu() {
+        document.getElementById("menuMovil").style.left = "-100%";
 }
 
-//carrusel
+//carrusel jquerie
 $(document).ready(function() {
     // CARRUSEL
     let $track = $('.carrusel-track');
@@ -138,7 +191,7 @@ $(document).ready(function() {
     });
 });
 
-// Datos reales
+// Datos reales gráfica
 const labels = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
                 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
