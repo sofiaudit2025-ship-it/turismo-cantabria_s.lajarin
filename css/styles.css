@@ -27,7 +27,7 @@ nav#menu {
     top: 0;
     width: 100%;
     background-color: var(--color-fondo2);
-    z-index: 100;
+    z-index: 1000;
     padding-top: 10px;
 }
 
@@ -1484,14 +1484,7 @@ body, html {
         padding: 0;
     }
 
-    .intro-texto h2 {
-        font-size: 2.5rem;
-    }
 
-    .intro-texto p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
 }
 
 /* Móviles pequeños */
@@ -1506,14 +1499,6 @@ body, html {
         object-fit: contain;
     }
 
-    .intro-texto h2 {
-        font-size: 2rem;
-    }
-
-    .intro-texto p {
-        font-size: 0.95rem;
-        line-height: 1.4rem;
-    }
 }
 
 /*ficha*/
@@ -1655,6 +1640,8 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    cursor: pointer;
+
 }
 
 .carrusel-item img {
@@ -1697,7 +1684,7 @@ body, html {
     font-size: 2rem;
     padding: 12px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1706,15 +1693,14 @@ body, html {
 
 
 /* Posiciones */
-.carrusel-prev { left: 10px; }
-.carrusel-next { right: 10px; }
+.carrusel-prev { left: 20px; }
+.carrusel-next { right: 20px; }
 
 /* Ocultar scroll nativo */
 .carrusel-track::-webkit-scrollbar {
     display: none;
 }
 .carrusel-track {
-    -ms-overflow-style: none; 
     scrollbar-width: none;  
 }
 
@@ -1905,13 +1891,7 @@ body, html {
     padding-right: 0;
   }
 
-  .como-texto h2 {
-    font-size: 2.5rem; /* Reduce título */
-  }
 
-  .como-texto p {
-    font-size: 0.95rem; /* Ajusta párrafo */
-  }
 }
 
 /* Pantallas pequeñas: hasta 600px */
@@ -1931,15 +1911,7 @@ body, html {
     font-size: 0.85rem; /* Reduce tamaño de texto */
   }
 
-  .como-texto h2 {
-    font-size: 2rem; /* Ajusta título */
-    margin-top: 40px;
-  }
 
-  .como-texto p {
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
 
   .como-mapa {
     flex: 1 1 100%;
@@ -2002,70 +1974,156 @@ body, html {
     font-weight: 300;
     line-height: 1.6;
     color: var(--color-texto2);
-    width: 400px;
+    width: 100%;
+    text-align: left;
 }
 
 @media screen and (max-width: 900px) {
     .grafica-contenido {
-        flex-direction: column; /* apila verticalmente */
-        align-items: center; /* centra los elementos */
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        gap: 40px; /* espacio entre gráfico y texto */
+        padding: 20px;
     }
 
     .grafica-lienzo {
-        flex: 1 1 90%; /* ocupa más ancho disponible */
-        justify-content: center;
+        width: 100%;
+        text-align: center;
     }
 
     .grafica-lienzo canvas {
-        max-width: 600px; /* mantiene tamaño grande */
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .grafica-texto {
-        flex: 1 1 90%;
-        text-align: center; /* texto centrado */
-    }
-
-    .grafica-texto h2 {
-        font-size: 2.6rem;
-    }
-
-    .grafica-texto p {
-        font-size: 1.05rem;
-        line-height: 1.6;
-    }
 }
 
 
 @media screen and (max-width: 600px) {
+    .seccion-grafica {
+        padding: 15px 10px;
+    }
+
     .grafica-contenido {
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        text-align: center;
+        padding-left: 20px;
     }
 
     .grafica-lienzo {
-        flex: 1 1 100%;
-        justify-content: center;
+        width: 100%;
     }
 
     .grafica-lienzo canvas {
-        max-width: 100%; /* ocupa todo el ancho disponible */
-        padding: 15px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .grafica-texto {
-        flex: 1 1 100%;
-        text-align: center; /* centrado */
+}
+
+ /* mediaqueries de solo textos comunes */
+
+@media screen and (max-width: 900px) {
+
+    .grafica-texto,
+    .grafica-texto h2,
+    .grafica-texto p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .grafica-texto h2 {
+    .grafica-contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .grafica-lienzo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .grafica-lienzo canvas {
+        max-width: 600px;
+    }
+
+    .intro-texto,
+    .grafica-texto,
+    .como-texto    {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .intro-texto h2,
+    .grafica-texto h2,
+    .como-texto h2 {
+        font-size: 2.5rem;
+    }
+
+    .intro-texto p,
+    .grafica-texto p,
+    .como-texto p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .seccion-grafica {
+        padding: 15px 10px;
+    }
+
+    .grafica-contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .grafica-lienzo {
+        width: 100%;
+    }
+
+    .grafica-lienzo canvas {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        padding: 0;
+    }
+
+    .grafica-texto,
+    .grafica-texto h2,
+    .grafica-texto p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+
+    .intro-texto,
+    .como-texto  {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .intro-texto h2,
+    .como-texto h2 {
         font-size: 2rem;
     }
 
-    .grafica-texto p {
+    .intro-texto p,
+    .como-texto p{
         font-size: 0.95rem;
-        line-height: 1.5;
+        line-height: 1.4rem;
     }
 }
