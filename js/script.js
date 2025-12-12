@@ -93,17 +93,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-/*hora y temperatura jquery*/
+$(document).ready(function() {
     function actualizarHora() {
         const ahora = new Date();
         const hora = ahora.getHours().toString().padStart(2, '0');
         const minutos = ahora.getMinutes().toString().padStart(2, '0');
         $("#hora").text(`Hora: ${hora}:${minutos}`);
     }
-    actualizarHora();
-    setInterval(actualizarHora, 60000);
-    $("#temperatura").text("Temperatura: 18°C");
 
+    // Inicializa la hora
+    actualizarHora();
+    // Actualiza cada minuto
+    setInterval(actualizarHora, 60000);
+    });
 
 /*menu hamburguesa*/
 

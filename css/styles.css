@@ -769,6 +769,7 @@ nav#menu img.logo {
     width: 250px;            /* ajusta el ancho como quieras */
     margin-top: 10px;        /* separación opcional */
     margin-left: auto;        /* lo alinea a la derecha */
+    font-weight: 400;
 }
 
 .footer-column.newsletter h2 {
@@ -880,7 +881,7 @@ nav#menu img.logo {
     margin-top: 20px;
 }
 
-/* Recuadro blanco para hora y temperatura */
+/* Recuadro blanco para hora */
 .weather-box {
     background-color: var(--color-fondo2);
     color: var(--color-texto2); 
@@ -889,18 +890,20 @@ nav#menu img.logo {
     font-weight: 600;
     height: 90px;
     width: 250px; 
-    margin-top: 25px; /* asegura separación con contacto */
+    margin-top: 25px; 
     margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-    text-align: left;
+    text-align: center;
+    font-size: 3rem;
+
 }
 
 /* Texto interno */
 .weather-box p {
     margin: 5px 0;
-    font-size: 1.4rem;
+    font-size: 3rem;
     font-family: var(--fuente-texto);
-    font-weight: 500;
+    color: var(--color-texto2);
+    padding-top: 15px;
 }
 
 @media screen and (max-width: 900px) {
